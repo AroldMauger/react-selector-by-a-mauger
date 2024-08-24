@@ -1,18 +1,18 @@
 
 # React-selector-by-a-mauger
 
-![npm version](https://img.shields.io/npm/v/react-selector-by-a-mauger)
+![npm version](https://img.shields.io/npm/v/react-selector-by-ar-mauger)
 
 ## Présentation
 
-`react-selector-by-a-mauger` est un composant React pour afficher un sélecteur personnalisé. Simple à utiliser ce composant est particulièrement adapté aux projets nécessitant une interface personnalisée avec des options sélectionnables sous forme de liste déroulante. L'utilisation de balise `<ul>` et `<li>` offre un meilleur contrôle sur le style css du sélecteur. 
+`react-selector-by-ar-mauger` est un composant React pour afficher un sélecteur personnalisé. Simple à utiliser ce composant est particulièrement adapté aux projets nécessitant une interface personnalisée avec des options sélectionnables sous forme de liste déroulante. L'utilisation de balise `<ul>` et `<li>` offre un meilleur contrôle sur le style css du sélecteur. 
 
 ## Installation
 
 Vous pouvez installer le composant via npm :
 
 ```bash
-npm install react-selector-by-a-mauger
+npm install react-selector-by-ar-mauger
 ```
 
 ## Prérequis
@@ -33,8 +33,8 @@ Voici un exemple de base montrant comment utiliser le composant `SimpleReactSele
 
 ```tsx
 import React, { useState } from 'react';
-import SimpleReactSelector from 'react-selector-by-a-mauger';
-import 'react-selector-by-a-mauger/dist/SimpleReactSelector.css'; // Assurez-vous d'importer les styles
+import SimpleReactSelector from 'react-selector-by-ar-mauger';
+import 'react-selector-by-ar-mauger/dist/SimpleReactSelector.css'; // Assurez-vous d'importer les styles
 
 const options = [
   { value: 'option1', label: 'Option 1' },
@@ -78,8 +78,8 @@ export default App;
 Pour développer localement ce composant, clonez le dépôt et installez les dépendances avec :
 
 ```bash
-git clone https://github.com/AroldMauger/react-selector-by-a-mauger.git
-cd react-selector-by-a-mauger
+git clone https://github.com/AroldMauger/react-selector-by-ar-mauger.git
+cd react-selector-by-ar-mauger
 npm install
 ```
 
@@ -93,4 +93,4 @@ npm run build
 
 ## Liens
 
-- [Dépôt GitHub](https://github.com/AroldMauger/react-selector-by-a-mauger.git)
+- [Dépôt GitHub](https://github.com/AroldMauger/react-selector-by-ar-mauger.git)

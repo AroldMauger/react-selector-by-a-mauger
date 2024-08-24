@@ -1,6 +1,6 @@
 {
-  "name": "react-selector-by-a-mauger",
-  "version": "1.0.5",
+  "name": "react-selector-by-ar-mauger",
+  "version": "1.0.6",
   "description": "A simple react selector for my OC project",
   "main": "dist/index.js",
   "style": "dist/SimpleReactSelector.css",
