@@ -9,6 +9,7 @@ interface SimpleReactSelectorProps {
     onChange: (selectedOption: Option | null) => void;
     value?: Option | null;
     placeholder?: string;
+    id?: string;
 }
 declare const SimpleReactSelector: React.FC<SimpleReactSelectorProps>;
 export default SimpleReactSelector;

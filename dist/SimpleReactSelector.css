@@ -10,9 +10,10 @@
   width: 100%;
   padding: 8px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 4px;
   cursor: pointer;
+  color:black;
 }
 
 .custom-selector__options {
@@ -41,5 +42,5 @@
 
 .custom-selector__option:hover {
   background-color: #93ad19;
-  color: white;
+  color: black;
 }

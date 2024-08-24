@@ -6,16 +6,19 @@ interface Option {
   label: string;
 }
 
+type NullableSelectedOption = Option | null
+
 interface SimpleReactSelectorProps {
   options: Option[];
-  onChange: (selectedOption: Option | null) => void;
-  value?: Option | null;
+  onChange: (selectedOption: NullableSelectedOption) => void;
+  value?: NullableSelectedOption;
   placeholder?: string;
+  id?: string;  
 }
 
-const SimpleReactSelector: React.FC<SimpleReactSelectorProps> = ({ options, onChange, value, placeholder }) => {
+const SimpleReactSelector: React.FC<SimpleReactSelectorProps> = ({ options, onChange, value, placeholder, id }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState<Option | null>(value || null);
+  const [selected, setSelected] = useState<NullableSelectedOption>(value || null);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -26,7 +29,7 @@ const SimpleReactSelector: React.FC<SimpleReactSelectorProps> = ({ options, onCh
   };
 
   return (
-    <div className="custom-selector">
+    <div className="custom-selector"  id={id}>
       <div className="custom-selector__selected" onClick={toggleDropdown}>
         {selected ? selected.label : placeholder}
       </div>
