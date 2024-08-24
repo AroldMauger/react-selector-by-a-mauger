@@ -1,5 +1,5 @@
 
-# React-selector-by-a-mauger
+# React-selector-by-ar-mauger
 
 ![npm version](https://img.shields.io/npm/v/react-selector-by-ar-mauger)
 
@@ -27,31 +27,74 @@ Voici les versions spécifiques recommandées :
 - `react-dom: ^18.3.1`
 - `typescript: ^5.5.4`
 
+## Exemple de configuration `tsconfig.json`
+
+Voici un exemple de configuration `tsconfig.json` pour s'assurer que le projet est compatible avec React et TypeScript :
+
+```json
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src"]
+}
+```
+
+## Explication des options importantes :
+
+- target : Définit la version ECMAScript cible pour la compilation. ESNext permet d'utiliser les dernières fonctionnalités.
+- lib : Indique les bibliothèques utilisées dans le projet. Ici, on utilise le DOM et ECMAScript Next.
+- jsx : Spécifie que le projet utilise JSX avec la configuration React (important pour les composants React).
+- esModuleInterop et allowSyntheticDefaultImports : Permettent d'importer correctement les modules CommonJS et ESModule, nécessaires pour React.
+- strict : Active des vérifications strictes de type, garantissant un code TypeScript plus robuste.
+
 ## Exemple d'utilisation
 
 Voici un exemple de base montrant comment utiliser le composant `SimpleReactSelector` dans un projet React.
 
 ```tsx
-import React, { useState } from 'react';
-import SimpleReactSelector from 'react-selector-by-ar-mauger';
-import 'react-selector-by-ar-mauger/dist/SimpleReactSelector.css'; // Assurez-vous d'importer les styles
+import { useState } from 'react';
+import SimpleReactSelector from 'react-selector-by-ar-mauger/dist/SimpleReactSelector';
+import 'react-selector-by-ar-mauger/dist/SimpleReactSelector.css'; 
 
-const options = [
-  { value: 'option1', label: 'Option 1' },
-  { value: 'option2', label: 'Option 2' },
-  { value: 'option3', label: 'Option 3' },
+// Définition du type Option
+interface Option {
+  value: string;
+  label: string;
+}
+
+const options: Option[] = [
+  { value: 'CH', label: 'Chinese' },
+  { value: 'EN', label: 'English' },
+  { value: 'FR', label: 'French' },
+  { value: 'RU', label: 'Russian' },
+  { value: 'ES', label: 'Spanish' },
+
 ];
 
 const App = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
-  const handleSelectionChange = (option) => {
+  const handleSelectionChange = (option: Option | null) => {
     setSelectedOption(option);
   };
 
   return (
     <div>
-      <h1>Simple React Selector Example</h1>
+      <h1>Example with languages</h1>
       <SimpleReactSelector 
         options={options} 
         onChange={handleSelectionChange} 
@@ -63,6 +106,7 @@ const App = () => {
 };
 
 export default App;
+
 ```
 
 ### Props
