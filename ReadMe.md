@@ -70,7 +70,6 @@ import { useState } from 'react';
 import SimpleReactSelector from 'react-selector-by-ar-mauger/dist/SimpleReactSelector';
 import 'react-selector-by-ar-mauger/dist/SimpleReactSelector.css'; 
 
-// Définition du type Option
 interface Option {
   value: string;
   label: string;
