@@ -1,0 +1,36 @@
+name: ci
+
+on:
+    push:
+        branches:
+            - main
+    
+defaults:
+    run:
+        working-directory: ./
+
+jobs:
+    publish:
+        runs-on: ubuntu-20.04
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                clean: false
+                ref: ${{ github.head_ref }}
+
+            - uses: actions/setup-node@v4
+              with:
+                node-version: '20.15.1'
+            
+            - name: install-dependencies
+              run: npm ci
+        
+            - name: build-library
+              run: npm run build
+
+            - name: publish-library
+              run: npm publish
+              env: 
+                NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

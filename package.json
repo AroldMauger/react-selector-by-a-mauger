@@ -1,6 +1,6 @@
 {
   "name": "react-selector-by-ar-mauger",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A simple react selector for my OC project",
   "main": "dist/index.js",
   "style": "dist/SimpleReactSelector.css",
@@ -23,6 +23,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^16.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "typescript": "^5.5.4"
