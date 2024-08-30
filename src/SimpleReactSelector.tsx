@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './SimpleReactSelector.css';
 
 interface Option {
   value: string;
